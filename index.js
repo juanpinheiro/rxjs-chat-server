@@ -1,6 +1,12 @@
 let express = require('express')
 let app = express();
 
+let cors = require('cors');
+const corsOptions = {
+    origin: '*'
+}  
+app.use(cors(corsOptions));
+
 let http = require('http');
 let server = http.Server(app);
 
